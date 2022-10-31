@@ -12,24 +12,24 @@ const login = async (cancelToken) => {
 
 //login(source.token)
 
-const cat_get = async (cancelToken) => {
-    const {error, categories} = await apiCat.get(cancelToken)
+const user_get = async (cancelToken) => {
+    const {error, categories} = await apiUser.get(cancelToken)
     console.log(error)
     console.log(categories)
 }
 //cat_get(source.token)
 
-const cat_post = async (cancelToken) =>{
-    const {error} = await apiCat.post(token,"Calming",source.token)
+const user_post = async (cancelToken) =>{
+    const {error} = await apiUser.post(token,source.token)
     console.log(error)
 }
 //cat_post(source.token)
 
-const cat_put = async (cancelToken) =>{
-    const {error} = await apiCat.put(token, 3,"This catergory has been changed for the better", source.token)
+const user_put = async (cancelToken) =>{
+    const {error} = await apiUser.put(token, 3,"User has been updated successfully", source.token)
     console.log(error) }
 
-const cat_del = async (cancelToken) =>{
-    const {error} = await apiCat.del(token, 3, source.token)
+const user_del = async (cancelToken) =>{
+    const {error} = await apiUser.del(token, 3, source.token)
     console.log(error)
 }
